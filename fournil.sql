@@ -55,7 +55,7 @@ CREATE TABLE `catproduct` (
   `image` varchar(50) NOT NULL,
   `ordre_affichage` int(11) NOT NULL DEFAULT '1',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=54 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=56 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -64,7 +64,7 @@ CREATE TABLE `catproduct` (
 
 LOCK TABLES `catproduct` WRITE;
 /*!40000 ALTER TABLE `catproduct` DISABLE KEYS */;
-INSERT INTO `catproduct` VALUES (41,0,'Biscuits & Macarons','/_MG_5081-41.jpg',1),(43,0,'Bûches de Noël','/036-43.jpg',2),(50,41,'Biscuits','',1),(51,41,'Macarons','',2);
+INSERT INTO `catproduct` VALUES (41,0,'Biscuits & Macarons','/_MG_5081-41.jpg',1),(43,0,'Bûches de Noël','/036-43.jpg',2),(50,41,'Biscuits','',1),(51,41,'Macarons','',2),(54,43,'zzzz','',1),(55,0,'ICONEO','/002-55.jpg',1);
 /*!40000 ALTER TABLE `catproduct` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -302,7 +302,7 @@ CREATE TABLE `product` (
   `tag` varchar(100) NOT NULL,
   `online` enum('0','1') NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -311,7 +311,7 @@ CREATE TABLE `product` (
 
 LOCK TABLES `product` WRITE;
 /*!40000 ALTER TABLE `product` DISABLE KEYS */;
-INSERT INTO `product` VALUES (1,50,'Cookies chocolat orange','Retrouvez le goût authentique des cakes élaborés dans la plus pure tradition.\r\nComposition : œuf, sucre, beurre, poudre d’amandes, farine, fruits, sorbitol. Traces possible de fruits à coques.','/88-1.jpg','Orange; Noix du Périgord ;Fruits ','1'),(2,50,'Diamants','Ce biscuit sablé tient son nom de la brillance que lui donne sa croute de sucre cristal sur le dessus.\r\nComposition : Farine, Beurre, Sucre, jaune d’œufs, Sel','/54-.jpg','Vanille;Chocolat;Pistache;Caramel;Pois chiches;Pois cassés;Lentilles','1');
+INSERT INTO `product` VALUES (1,50,'Cookies chocolat orange','Retrouvez le goût authentique des cakes élaborés dans la plus pure tradition.\r\nComposition : œuf, sucre, beurre, poudre d’amandes, farine, fruits, sorbitol. Traces possible de fruits à coques.','/88-1.jpg','Orange; Noix du Périgord ;Fruits ','1'),(2,50,'Diamants','Ce biscuit sablé tient son nom de la brillance que lui donne sa croute de sucre cristal sur le dessus.\r\nComposition : Farine, Beurre, Sucre, jaune d’œufs, Sel','/54-.jpg','Vanille;Chocolat;Pistache;Caramel;Pois chiches;Pois cassés;Lentilles','1'),(3,54,'zzzz','kjh hklkj mkjmlkùlkmlkmlk ùlmjù ljùlmjkù','/88-3.jpg','vanille;gras','1');
 /*!40000 ALTER TABLE `product` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -324,4 +324,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2015-11-17 10:58:04
+-- Dump completed on 2015-11-19 11:51:21

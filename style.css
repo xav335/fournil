@@ -27,7 +27,7 @@ p {color:#fff;font-size:18px;line-height:22px;}
 
 .telephone {position:absolute;right:3%;top:28px;font-size:48px;color:#a20109;}
 
-.menu {position:absolute;width:100%;max-width:none;text-align:center;top:166px;z-index:99;background:rgba(162,1,9,0.7);color:#f7e4a8;font-size:24px;}
+.menu {position:absolute;width:100%;max-width:none;text-align:center;top:166px;z-index:99;background:url('img/bg-menu.png') repeat-x center top;color:#f7e4a8;font-size:24px;padding-top:35px;}
 .menu a {display:inline-block;color:#f7e4a8;border-bottom:6px solid transparent;}
 .menu a:hover, .menu a.active {border-bottom-color:#f7e4a8;}
 

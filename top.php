@@ -1,6 +1,6 @@
 		<!-- Logo -->
 		<div class="logo">
-			<img src="img/logo-banette.svg" alt="" />
+			<img src="img/logo-fournil.png" alt="" />
 		</div>
 		<!-- End Logo -->
 		
