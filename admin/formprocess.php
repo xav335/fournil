@@ -1,13 +1,9 @@
 <?php
 	require '../inc/inc.config.php';
 	require 'classes/Authentication.php';
-	require 'classes/Offre_type_bien.php';
-	require 'classes/Offre.php';
-	require 'classes/Offre_image.php';
 	require 'classes/News.php';
 	require 'classes/Contact.php';
 	require 'classes/Goldbook.php';
-	require 'classes/Catproduct.php';
 	require 'classes/Planning.php';
 	require 'classes/ImageManager.php';
 	require 'classes/utils.php';

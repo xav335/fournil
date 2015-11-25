@@ -131,6 +131,7 @@ class Produit extends StorageManager {
 			
 			// ---- Chargement de la catégorie ----- //
 			$data = $this->load( $id, $debug );
+			$this->dbConnect();
 			//print_pre( $data );
 			
 			// ---- Suppression de la catégorie ---- //

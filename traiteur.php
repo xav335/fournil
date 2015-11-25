@@ -32,7 +32,7 @@
 		<?php include('footer.php'); ?>
 	    <script>
 			$(document).ready(function(){
-				$('.menu a:nth-of-type(2)').addClass('active');
+				$('.menu a:nth-of-type(4)').addClass('active');
 			});
 		</script>
 		
