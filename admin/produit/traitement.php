@@ -45,13 +45,13 @@
 		$imageManager = null;
 		// ---------------------------------------------- //
 		
-		// ---- Traitement des données ------------------ //
+		// ---- Traitement des donnï¿½es ------------------ //
 		if ( 1 == 1 ) {
 			$id = $produit->gererDonnees( $_POST, $debug );
 		}
 		// ---------------------------------------------- //
 		
-		// ---- Redirection après traitement ------------ //
+		// ---- Redirection aprï¿½s traitement ------------ //
 		if ( 1 == 1 ) {
 			
 			// ---- Modification... ---- //
