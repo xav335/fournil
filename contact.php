@@ -10,7 +10,12 @@
 	
 	$mon_action = $_POST[ "mon_action" ];
 	$anti_spam = $_POST[ "as" ];
+	$demande_carte = $_GET[ "carte" ];
 	//print_pre( $_POST );
+	
+	// ---- Demande de carte de fidélité --------------------- //
+	$checked_carte = ( $_GET[ "carte" ] == 1 ) ? "selected" : "";
+	$titre_page = ( $_GET[ "carte" ] == 1 ) ? "Demande de carte de fidélité" : "Contactez-nous";
 	
 	// ---- Post du formulaire ------------------------------- //
 	if ( $mon_action == "poster" && $anti_spam == '' ) {
@@ -58,6 +63,7 @@
 			$message .= "Nom : <b>" . $_POST[ "nom" ] . " " . $_POST[ "prenom" ] . "</b><br>";
 			$message .= "E-mail / Téléphone : <b>" . $_POST[ "email" ] . " / " . $_POST[ "tel" ] . "</b><br>";
 			$message .= "Adresse postale : <b>" . $_POST[ "adresse" ] . ", " . $_POST[ "cp" ] . " " . $_POST[ "ville" ] . "</b><br>";
+			$message .= "Sujet : <b>" . $_POST[ "sujet" ] . "</b><br>";
 			$message .= "Message : <br><i>" . nl2br( $_POST[ "message" ] ) . "</i><br><br>";
 			$message .= "Cordialement.";
 			$message = utf8_decode( $message );
@@ -85,8 +91,7 @@
 		
 		<!-- Content -->
 		<div class="row">
-			
-			<h2>Contactez-nous</h2>
+			<h2><?=$titre_page?></h2>
 			
 			<div class="large-6 medium-6 small-12 columns">
 				<h3>Le Fournil d’Artigues</h3>
@@ -126,6 +131,14 @@
 					</div>
 					<div class="large-6 medium-12 columns">
 						<input type="email" name="email" id="email" placeholder="Votre e-mail" />
+					</div>
+					<div class="large-12 columns">
+						<select name="sujet">
+							<option	value="" selected>A propos de ...</option>
+							<option	value="Renseignements">Renseignements</option>
+							<option	value="Demande de carte de fidélité" <?=$checked_carte?> >Demande de carte de fidélité</option>
+							<option	value="Autre">Autre</option>
+						</select>
 					</div>
 					<div class="large-12 columns">
 						<textarea name="message" id="message" placeholder="Votre message"></textarea>
