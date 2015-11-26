@@ -23,7 +23,7 @@ if (!empty($_GET)){
 				<iframe id="laframe" src="/admin/newsletter-corecontent.php?id=<?php  echo $id_produit ?>" style="width:720px;height:500px;" frameborder="1" ></iframe>
 			</div>
 			<div class="col-md-2">
-				<h4>Tester la news <br>(envoi limité à <?=MAIL_CUSTOMER?>)</h4>
+				<h4>Tester la news <br>(envoi limité à <?=MAILCUSTOMER?>)</h4>
 				<form name="formulaire" class="form-horizontal" method="POST"  action="newsletter-fp.php">
 					<input type="hidden" name="reference" value="newsletter">
 					<input type="hidden" name="action" id="action" value="envoi">

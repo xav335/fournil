@@ -40,7 +40,7 @@
 	define( "DBUSER",	$user );
 	define( "DBPASSWD", $mdp );
 	
-	define( "MAILCUSTOMER", 	"NePasRepondre@fournil.com" );
+	define( "MAILCUSTOMER", 	"contact@fournildartigues.com" );
 	define( "MAILNAMECUSTOMER", "Le fournil d'Artigues" );
 	define( "URLSITEDEFAULT", 	"http://www.fournildartigues.com/" );
 	define( "FACEBOOK_LINK", 	"https://www.facebook.com/lesfournilsdejeanphilippe" );
