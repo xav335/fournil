@@ -83,11 +83,11 @@
 <html class="no-js" lang="fr">
 	<head>
 		<title>Le Fournil d’Artigues > Contact</title>
-		<?php include('meta.php'); ?>
+		<? include( $_SERVER[ "DOCUMENT_ROOT" ] . "/inc/meta.php" ); ?>
 	</head>
 	<body class="page">
 		
-		<?php include('top.php'); ?>
+		<? include( $_SERVER[ "DOCUMENT_ROOT" ] . "/inc/top.php" ); ?>
 		
 		<!-- Content -->
 		<div class="row">
@@ -115,7 +115,7 @@
 						<input type="text" name="prenom" id="prenom" placeholder="Votre prénom" />						
 					</div>
 					<div class="large-6 medium-12 columns">
-						<input type="text" name="nom" id="nom" placeholder="Votre nom" />
+						<input type="text" name="nom" id="nom" placeholder="Votre nom" required />
 					</div>
 					<div class="large-12 columns">
 						<input type="text" name="adresse" placeholder="Votre adresse">
@@ -127,13 +127,13 @@
 						<input type="text" name="ville" placeholder="Ville" />
 					</div>
 					<div class="large-6 medium-12 columns">
-						<input type="tel" name="tel" id="tel" placeholder="Votre n° de téléphone" />						
+						<input type="tel" name="tel" id="tel" placeholder="Votre n° de téléphone" required />						
 					</div>
 					<div class="large-6 medium-12 columns">
-						<input type="email" name="email" id="email" placeholder="Votre e-mail" />
+						<input type="email" name="email" id="email" placeholder="Votre e-mail" required />
 					</div>
 					<div class="large-12 columns">
-						<select name="sujet">
+						<select name="sujet" required>
 							<option	value="" selected>A propos de ...</option>
 							<option	value="Renseignements">Renseignements</option>
 							<option	value="Demande de carte de fidélité" <?=$checked_carte?> >Demande de carte de fidélité</option>
@@ -141,7 +141,7 @@
 						</select>
 					</div>
 					<div class="large-12 columns">
-						<textarea name="message" id="message" placeholder="Votre message"></textarea>
+						<textarea name="message" id="message" placeholder="Votre message" required></textarea>
 					</div>
 					<div class="large-12 columns">
 						<input type="submit" value="Envoyer" />
@@ -152,7 +152,7 @@
 		</div>
 		<!-- End Content -->
 		
-		<?php include('footer.php'); ?>
+		<? include( $_SERVER[ "DOCUMENT_ROOT" ] . "/inc/footer.php" ); ?>
 		
 	    <script>
 			$(document).ready(function() {

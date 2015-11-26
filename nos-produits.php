@@ -19,11 +19,11 @@
 <html class="no-js" lang="fr">
 	<head>
 		<title>Le Fournil d’Artigues > Nos Produits</title>
-		<? include('meta.php'); ?>
+		<? include( $_SERVER[ "DOCUMENT_ROOT" ] . "/inc/meta.php" ); ?>
 	</head>
 	<body class="page">
 		
-		<? include('top.php'); ?>
+		<? include( $_SERVER[ "DOCUMENT_ROOT" ] . "/inc/top.php" ); ?>
 		
 		<div class="row catalogue">
 			
@@ -50,7 +50,7 @@
 			
 		</div>
 		
-		<? include('footer.php'); ?>
+		<? include( $_SERVER[ "DOCUMENT_ROOT" ] . "/inc/footer.php" ); ?>
 		
 	    <script>
 	    	

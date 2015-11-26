@@ -38,11 +38,11 @@
 <html class="no-js" lang="fr">
 	<head>
 		<title>Le Fournil d'Artigues > <?=$titre?></title>
-		<? include('meta.php'); ?>
+		<? include( $_SERVER[ "DOCUMENT_ROOT" ] . "/inc/meta.php" ); ?>
 	</head>
 	<body class="page">
 		
-		<? include('top.php'); ?>
+		<? include( $_SERVER[ "DOCUMENT_ROOT" ] . "/inc/top.php" ); ?>
 		
 		<!-- Content -->
 		<div class="row">
@@ -106,7 +106,7 @@
 			</div>
 		</div>
 		
-		<? include('footer.php'); ?>
+		<? include( $_SERVER[ "DOCUMENT_ROOT" ] . "/inc/footer.php" ); ?>
 		
 	    <script>
 	    	

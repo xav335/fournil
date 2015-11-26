@@ -41,12 +41,12 @@
 <html class="no-js" lang="fr">
 	<head>
 		<title>Le Fournil d’Artigues</title>
-		<?php include('meta.php'); ?>
+		<? include( $_SERVER[ "DOCUMENT_ROOT" ] . "/inc/meta.php" ); ?>
 	</head>
 	
 	<body>
 		
-		<?php include('top.php'); ?>
+		<? include( $_SERVER[ "DOCUMENT_ROOT" ] . "/inc/top.php" ); ?>
 		
 		<!-- Content -->
 		<div class="row">
@@ -67,7 +67,8 @@
 		</div>
 		<!-- End Content -->
 		
-		<?php include('footer.php'); ?>
+		<? include( $_SERVER[ "DOCUMENT_ROOT" ] . "/inc/footer.php" ); ?>
+		
 	    <script>
 			$(document).ready(function(){
 				$('.menu a:first-of-type').addClass('active');

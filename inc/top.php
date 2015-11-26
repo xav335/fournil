@@ -1,6 +1,6 @@
 		<!-- Logo -->
 		<div class="logo">
-			<img src="img/logo-banette.svg" alt="" />
+			<img src="img/logo-fournil.png" alt="" />
 		</div>
 		<!-- End Logo -->
 		
@@ -14,7 +14,7 @@
 		<div class="row menu">
 			<div class="large-12 columns">
 				<h1>Le Fournil d’Artigues</h1>
-				<a href="/">Accueil</a> - <a>Qui sommes-nous</a> - <a href="nos-produits.php">Nos produits</a> - <a>Traiteur</a> - <a>Actu</a> - <a>Livre d’or</a> - <a>Contact</a>
+				<a href="/">Accueil</a> - <a href="qui-sommes-nous.php">Qui sommes-nous</a> - <a href="nos-produits.php">Nos produits</a> - <a href="traiteur.php">Traiteur</a> - <a href="actualites.php">Actu</a> - <a href="livre-dor.php">Livre d’or</a> - <a href="contact.php">Contact</a>
 			</div>
 		</div>
 		<!-- End Menu -->
