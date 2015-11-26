@@ -1,5 +1,6 @@
 <?php include_once 'inc-auth-granted.php';?>
 <?php include_once 'classes/utils.php';?>
+<?php include_once '../inc/inc.config.php'; ?>
 <?php 
 require 'classes/Newsletter.php';
 
