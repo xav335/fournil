@@ -2,9 +2,9 @@
 <?php include_once 'inc-auth-granted.php';?>
 <?php include_once 'classes/utils.php';?>
 <?php 
-$id = null;
+$id_produit = null;
 if (!empty($_GET)){
-	$id = $_GET['id'];
+	$id_produit = $_GET['id'];
 }
 ?>
 <!doctype html>
@@ -20,15 +20,15 @@ if (!empty($_GET)){
 		<div class="row">
 			<div class="col-md-10">
 				<h3>Aperçu de la newsletter :</h3>
-				<iframe id="laframe" src="/admin/newsletter-corecontent.php?id=<?php  echo $id ?>" style="width:720px;height:500px;" frameborder="1" ></iframe>
+				<iframe id="laframe" src="/admin/newsletter-corecontent.php?id=<?php  echo $id_produit ?>" style="width:720px;height:500px;" frameborder="1" ></iframe>
 			</div>
 			<div class="col-md-2">
-				<h4>Tester la news <br>(envoi limité à <?php echo $mailCustomer?>)</h4>
+				<h4>Tester la news <br>(envoi limité à <?=MAIL_CUSTOMER?>)</h4>
 				<form name="formulaire" class="form-horizontal" method="POST"  action="newsletter-fp.php">
 					<input type="hidden" name="reference" value="newsletter">
 					<input type="hidden" name="action" id="action" value="envoi">
 					<input type="hidden" name="postaction" id="postaction" value="">
-					<input type="hidden" name="id" id="id" value="<?php echo $id ?>">
+					<input type="hidden" name="id" id="id" value="<?php echo $id_produit ?>">
 		            <button class="btn btn-warning" type="submit" onclick="return validation('preview')"> Tester la newsletter </button>
 		            <br><br><br><br><br><br><br>
 		            <h4>Envoi Massif de la newsletter à tous les contacts :</h4>
