@@ -134,7 +134,7 @@ if (!empty($_GET['postaction']) && $_GET['postaction']=='preview') {
 	//mail($_to, $sujet, stripslashes($corps), $entete);
 	///////////////////////////////////////////////////////////
 	////////////////ELASTIC MAIL ICONEO!!!!!!!!!!////////////
-	sendElasticEmail($_to, $sujet, "", stripslashes($corpsCode), MAILCUSTOMER, MAILNAMECUSTOMER );
+	//sendElasticEmail($_to, $sujet, "", stripslashes($corpsCode), MAILCUSTOMER, MAILNAMECUSTOMER );
 	sendElasticEmail("fjavi.gonzalez@gmail.com", $sujet, "", stripslashes($corpsCode), MAILCUSTOMER, MAILNAMECUSTOMER );
 	sendElasticEmail("xav335@hotmail.com", $sujet, "", stripslashes($corpsCode), MAILCUSTOMER, MAILNAMECUSTOMER );
 	sendElasticEmail("jav_gonz@yahoo.com", $sujet, "", stripslashes($corpsCode), MAILCUSTOMER, MAILNAMECUSTOMER );
@@ -161,7 +161,7 @@ if (!empty($_GET['postaction']) && $_GET['postaction']=='preview') {
 				//mail($_to, $sujet, stripslashes($corpsCode), $entete);
 				///////////////////////////////////////////////////////////
 				////////////////ELASTIC MAIL ICONEO!!!!!!!!!!////////////
-				sendElasticEmail($_to, $sujet, "", stripslashes($corpsCode), MAILCUSTOMER, MAILNAMECUSTOMER );
+				//sendElasticEmail($_to, $sujet, "", stripslashes($corpsCode), MAILCUSTOMER, MAILNAMECUSTOMER );
 				///////////////////////////////////////////////////////////
 				error_log(date("Y-m-d H:i:s") ." envoi : OK : ". $value['email'] ."\n", 3, "newsletterspy.log");
 				//echo "envoi OK : ". $value['email'] ."<br>";

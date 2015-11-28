@@ -84,6 +84,23 @@ input[type="submit"]:hover {background:#a20109;}
 .contact input[type="submit"]:hover {background:#f7e4a8;color:#000;}
 .contact input[type="email"], .contact select {padding-top:5px;}
 
+.wait { display:none; }
+#div_success {
+	border: 2px solid green;
+	margin-bottom: 10px;
+}
+#div_success h3, #div_success p {
+	color: green;
+}
+
+#div_erreur {
+	border: 2px solid #A20109;
+	margin-bottom: 10px;
+}
+#div_erreur h3, #div_erreur p {
+	color: #A20109;
+}
+
 .footer {background:rgba(162,1,9,0.7);color:#fff;margin-top:120px;}
 .footer .row {margin:0 auto;max-width:62.5rem;width:100%;}
 .footer .large-12 {text-align:center;padding:36px 0;}

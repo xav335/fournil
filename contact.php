@@ -17,6 +17,9 @@
 	$checked_carte = ( $_GET[ "carte" ] == 1 ) ? "selected" : "";
 	$titre_page = ( $_GET[ "carte" ] == 1 ) ? "Demande de carte de fidélité" : "Contactez-nous";
 	
+	$affichage_success = "wait";
+	$affichage_erreur = "wait";
+	
 	// ---- Post du formulaire ------------------------------- //
 	if ( $mon_action == "poster" && $anti_spam == '' ) {
 		if ( $debug ) echo "On poste...<br>";
@@ -69,8 +72,11 @@
 			$message = utf8_decode( $message );
 			if ( $debug ) echo $message;
 			
-			mail( $_to, $sujet, stripslashes( $message ), $entete );
+			$retour = mail( $_to, $sujet, stripslashes( $message ), $entete );
 			//exit();
+			
+			$affichage_success = ( $retour ) ? "" : "wait";
+			$affichage_erreur = ( $retour ) ? "wait" : "";
 		}
 		// ------------------------------------------- //
 		//exit();
@@ -93,6 +99,19 @@
 		<div class="row">
 			<h2><?=$titre_page?></h2>
 			
+			<div id="div_success" class="large-12 medium-12 small-12 columns <?=$affichage_success?>">
+				<h3>Félicitations!</h3>
+				<p>Votre message a été envoyé avec succès!</p>
+			</div>
+			
+			<div id="div_erreur" class="large-12 medium-12 small-12 columns <?=$affichage_erreur?>">
+				<h3>Erreur!</h3>
+				<p>
+					Une erreur s'est produite lors de l'envoi de votre message.<br>
+					Veuillez essayer ultérieurement.
+				</p>
+			</div>
+			
 			<div class="large-6 medium-6 small-12 columns">
 				<h3>Le Fournil d’Artigues</h3>
 				<p>
@@ -106,6 +125,7 @@
 					33370 Artigues-près-Bordeaux
 				</p>
 			</div>
+			
 			<div class="large-6 medium-6 small-12 columns">
 				<form id="formulaire" class="row contact" method="post" action="contact.php">
 					<input type="hidden" name="mon_action" id="mon_action" value="" />
