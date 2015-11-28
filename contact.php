@@ -184,9 +184,8 @@
 					
 					function initialiser() {
 						$( "#nom" ).removeClass( "erreur" );
-						$( "#prenom" ).removeClass( "erreur" );
-						$( "#email" ).removeClass( "erreur" );
 						$( "#tel" ).removeClass( "erreur" );
+						$( "#email" ).removeClass( "erreur" );
 						$( "#message" ).removeClass( "erreur" );
 					}
 					
@@ -207,9 +206,9 @@
 							$( "#nom" ).addClass( "erreur" );
 						}
 						
-						if ( $.trim( $( "#prenom" ).val() ) == '' ) {
+						if ( $.trim( $( "#tel" ).val() ) == '' ) {
 							erreur = 1;
-							$( "#prenom" ).addClass( "erreur" );
+							$( "#tel" ).addClass( "erreur" );
 						}
 						
 						if ( $.trim( $( "#email" ).val() ) == '' ) {
@@ -219,11 +218,6 @@
 						else if ( !checkEmail( $.trim( $( "#email" ).val() ) ) ) {
 							erreur = 1;
 							$( "#email" ).addClass( "erreur" );
-						}
-						
-						if ( $.trim( $( "#tel" ).val() ) == '' ) {
-							erreur = 1;
-							$( "#tel" ).addClass( "erreur" );
 						}
 						
 						if ( $.trim( $( "#message" ).val() ) == '' ) {
