@@ -14,11 +14,11 @@
 <html class="no-js" lang="fr">
 	<head>
 		<title>Le Fournil d'Artigues > Actualités</title>
-		<?php include('meta.php'); ?>
+		<? include( $_SERVER[ "DOCUMENT_ROOT" ] . "/inc/meta.php" ); ?>
 	</head>
 	<body class="page">
 		
-		<?php include('top.php'); ?>
+		<? include( $_SERVER[ "DOCUMENT_ROOT" ] . "/inc/top.php" ); ?>
 		
 		<div class="row">
 			<h2>Actualités</h2>
@@ -46,7 +46,7 @@
 			
 		</div>
 		
-		<?php include('footer.php'); ?>
+		<? include( $_SERVER[ "DOCUMENT_ROOT" ] . "/inc/footer.php" ); ?>
 		
 	    <script>
 			$(document).ready(function(){

@@ -37,7 +37,7 @@ CREATE TABLE `admin` (
 
 LOCK TABLES `admin` WRITE;
 /*!40000 ALTER TABLE `admin` DISABLE KEYS */;
-INSERT INTO `admin` VALUES (1,'immo','immo33','administrateur'),(2,'admin','admin33','ico');
+INSERT INTO `admin` VALUES (1,'fournil','fournil33','administrateur'),(2,'admin','admin335','ico');
 /*!40000 ALTER TABLE `admin` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -55,7 +55,7 @@ CREATE TABLE `catproduct` (
   `image` varchar(50) NOT NULL,
   `ordre_affichage` int(11) NOT NULL DEFAULT '1',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=61 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=64 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -64,7 +64,7 @@ CREATE TABLE `catproduct` (
 
 LOCK TABLES `catproduct` WRITE;
 /*!40000 ALTER TABLE `catproduct` DISABLE KEYS */;
-INSERT INTO `catproduct` VALUES (41,0,'Biscuits & Macarons','/macarons-41.jpg',1),(43,0,'Bûches de Noël','/buche_de_noel-43.jpg',1),(50,41,'Biscuits','',1),(51,41,'Macarons','',2),(56,0,'Patisseries','/patisserie_01-.jpg',1),(58,56,'Piéces montées','/grande_pie_ce_monte_e-.jpg',1),(59,43,'Buches patissières','',1),(60,43,'Buches glacées','',2);
+INSERT INTO `catproduct` VALUES (41,0,'Biscuits & Macarons','/macarons-41.jpg',1),(43,0,'Bûches de Noël','/buche_de_noel-43.jpg',1),(50,41,'Biscuits','',1),(51,41,'Macarons','',2),(56,0,'Patisseries','/patisserie_01-.jpg',1),(58,56,'Piéces montées','/grande_pie_ce_monte_e-.jpg',1),(59,43,'Buches patissières','',1),(60,43,'Buches glacées','',2),(61,0,'sandwichs','/buche_noel_carette_vanille_framb-.jpg',1),(62,61,'classic','',1),(63,61,'complet','',2);
 /*!40000 ALTER TABLE `catproduct` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -89,7 +89,7 @@ CREATE TABLE `contact` (
   `fromgoldbook` tinyint(4) NOT NULL DEFAULT '0',
   `fromcontact` tinyint(4) NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -98,7 +98,7 @@ CREATE TABLE `contact` (
 
 LOCK TABLES `contact` WRITE;
 /*!40000 ALTER TABLE `contact` DISABLE KEYS */;
-INSERT INTO `contact` VALUES (1,'Francky','Langleron','24, rue Colbert','33140','Villevane d\'Ornòn','franck_langleron@hotmail.com','0650735822','c\'est un test...',0,0,1);
+INSERT INTO `contact` VALUES (1,'q','q','q','q','q','franck_langleron@hotmail.com','q','c\'est un test...',1,0,1),(10,'xavier','gonzalez','','','','fjavi.gonzalez@gmail.com',NULL,NULL,1,0,0);
 /*!40000 ALTER TABLE `contact` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -139,7 +139,7 @@ CREATE TABLE `goldbook` (
   `message` text,
   `online` tinyint(4) NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -148,7 +148,7 @@ CREATE TABLE `goldbook` (
 
 LOCK TABLES `goldbook` WRITE;
 /*!40000 ALTER TABLE `goldbook` DISABLE KEYS */;
-INSERT INTO `goldbook` VALUES (1,'2015-09-06 00:00:00','Franck Langleron','franck_langleron@hotmail.com','Très professionnel ! je recommande!!',1),(2,'2015-09-07 00:00:00','Xavier Gonzalez','xavier@gonzalez.pm','Prestation nickel, très pro, très satisfait',1),(3,'2015-11-07 00:00:00','L\'angléron','franck_langleron@hotmail.com','mon message \r\nc\'est ça!!!',1);
+INSERT INTO `goldbook` VALUES (1,'2015-09-06 00:00:00','Franck Langleron','franck_langleron@hotmail.com','Très professionnel ! je recommande!!',1),(2,'2015-09-07 00:00:00','Xavier Gonzalez','xavier@gonzalez.pm','Super boutique très pro',1),(3,'2015-11-07 00:00:00','L\'angléron','franck_langleron@hotmail.com','mon message \r\nc\'est ça!!!',0);
 /*!40000 ALTER TABLE `goldbook` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -193,7 +193,7 @@ CREATE TABLE `news` (
   `image1` varchar(250) DEFAULT NULL,
   `online` tinyint(4) NOT NULL DEFAULT '0',
   PRIMARY KEY (`id_news`)
-) ENGINE=InnoDB AUTO_INCREMENT=31 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=33 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -202,7 +202,7 @@ CREATE TABLE `news` (
 
 LOCK TABLES `news` WRITE;
 /*!40000 ALTER TABLE `news` DISABLE KEYS */;
-INSERT INTO `news` VALUES (29,'2015-09-22 00:00:00','Actualité nº1','l\'autre été je me baladais....','/369x200-29.jpg',1),(30,'2015-11-07 00:00:00','Nouveaux produits','Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.','/557x200-30.jpg',1);
+INSERT INTO `news` VALUES (30,'2015-11-07 00:00:00','Supers bûches de Noël','Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.','/buche_de_noel-30.jpg',1),(32,'2015-12-07 00:00:00','buhes en folie','buche -50%','/buche_noel_carette_vanille_framb-.jpg',1);
 /*!40000 ALTER TABLE `news` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -228,7 +228,7 @@ CREATE TABLE `newsletter` (
 
 LOCK TABLES `newsletter` WRITE;
 /*!40000 ALTER TABLE `newsletter` DISABLE KEYS */;
-INSERT INTO `newsletter` VALUES (12,'2015-01-01 00:00:00','Ceci est la toute nouvelle actu',' ');
+INSERT INTO `newsletter` VALUES (12,'2015-01-01 00:00:00','Pour les fêtes ',' ');
 /*!40000 ALTER TABLE `newsletter` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -247,7 +247,7 @@ CREATE TABLE `newsletter_detail` (
   `link` varchar(250) DEFAULT NULL,
   `texte` text,
   PRIMARY KEY (`id`,`id_newsletter`)
-) ENGINE=InnoDB AUTO_INCREMENT=327 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=328 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -256,7 +256,7 @@ CREATE TABLE `newsletter_detail` (
 
 LOCK TABLES `newsletter_detail` WRITE;
 /*!40000 ALTER TABLE `newsletter_detail` DISABLE KEYS */;
-INSERT INTO `newsletter_detail` VALUES (326,12,'','/IMG_5187-12.jpg','http://dev.votreimmopro.com','');
+INSERT INTO `newsletter_detail` VALUES (327,12,'Macarons superbes','/macarons-12.jpg','http://dev.fournildartigues.com/produit_detail.php?idc=41','Le macaron est un petit gâteau granuleux et moelleux à la forme arrondie, d\'environ 3 à 5 cm de diamètre, spécialité de plusieurs villes et régions françaises, et dont la recette et l\'aspect varie : Amiens, Boulay, Chartres, Cormery, Joyeuse, Le Dorat, Montmorillon, Nancy, Réau, Saint-Émilion, Sainte-Croix Lannion ou Sault. Il ne doit pas être confondu avec les confiseries à base de pâte d\'amande appelées massepain ni avec le congolais, à base de poudre de noix de coco.');
 /*!40000 ALTER TABLE `newsletter_detail` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -302,7 +302,7 @@ CREATE TABLE `product` (
   `tag` varchar(100) NOT NULL,
   `online` enum('0','1') NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -311,7 +311,7 @@ CREATE TABLE `product` (
 
 LOCK TABLES `product` WRITE;
 /*!40000 ALTER TABLE `product` DISABLE KEYS */;
-INSERT INTO `product` VALUES (1,50,'Cookies chocolat orange','Retrouvez le goût authentique des cakes élaborés dans la plus pure tradition.\r\nComposition : œuf, sucre, beurre, poudre d’amandes, farine, fruits, sorbitol. Traces possible de fruits à coques.','/cookies-1.jpg','Orange; Noix du Périgord ;Fruits ','1'),(2,50,'Diamants','Ce biscuit sablé tient son nom de la brillance que lui donne sa croute de sucre cristal sur le dessus.\r\nComposition : Farine, Beurre, Sucre, jaune d’œufs, Sel','/diamants_011 - Copy 1-2.jpg','Vanille;Chocolat;Pistache;Caramel;Pois chiches;Pois cassés;Lentilles','1'),(3,51,'Macarons top','super macarons ','/macarons-3.jpg','vanille;gras','1'),(4,58,'Piéces montées sur mesure','Sur commande uniquement','/grande_pie_ce_monte_e-4.jpg','vanilles;café;chocolat; caramel','1'),(5,58,'Spécial mariage','Spécial mariage','/001-.jpg','nappage;','1'),(6,60,'Buche de Noël','Buche de Noël','/buche_noel_carette_vanille_framb-.jpg','vanilles;café;chocolat; caramel;pistache','1');
+INSERT INTO `product` VALUES (1,50,'Cookies chocolat orange','Retrouvez le goût authentique des cakes élaborés dans la plus pure tradition.\r\nComposition : œuf, sucre, beurre, poudre d’amandes, farine, fruits, sorbitol. Traces possible de fruits à coques.','/cookies-1.jpg','Orange; Noix du Périgord ;Fruits ','1'),(2,50,'Diamants','Ce biscuit sablé tient son nom de la brillance que lui donne sa croute de sucre cristal sur le dessus.\r\nComposition : Farine, Beurre, Sucre, jaune d’œufs, Sel','/diamants_011 - Copy 1-2.jpg','Vanille;Chocolat;Pistache;Caramel;Pois chiches;Pois cassés;Lentilles','1'),(3,51,'Macarons top','super macarons ','/macarons-3.jpg','vanille;gras','1'),(4,58,'Piéces montées sur mesure','Sur commande uniquement','/grande_pie_ce_monte_e-4.jpg','vanilles;café;chocolat; caramel','1'),(5,58,'Spécial mariage','Spécial mariage','/001-.jpg','nappage;','1'),(6,60,'Buche de Noël','Buche de Noël','/buche_noel_carette_vanille_framb-.jpg','vanilles;café;chocolat; caramel;pistache','1'),(8,62,'jambon beurre','jambon beurre','/001-8.jpg','pavot;sesame;nature','1'),(9,63,'poulet',' ','/036-.jpg','pavot','1'),(10,62,'chorizo',' ','/_MG_5081-.jpg','','1');
 /*!40000 ALTER TABLE `product` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -324,4 +324,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2015-11-24 22:13:22
+-- Dump completed on 2015-11-28 12:34:15

@@ -10,7 +10,15 @@
 	
 	$mon_action = $_POST[ "mon_action" ];
 	$anti_spam = $_POST[ "as" ];
+	$demande_carte = $_GET[ "carte" ];
 	//print_pre( $_POST );
+	
+	// ---- Demande de carte de fidélité --------------------- //
+	$checked_carte = ( $_GET[ "carte" ] == 1 ) ? "selected" : "";
+	$titre_page = ( $_GET[ "carte" ] == 1 ) ? "Demande de carte de fidélité" : "Contactez-nous";
+	
+	$affichage_success = "wait";
+	$affichage_erreur = "wait";
 	
 	// ---- Post du formulaire ------------------------------- //
 	if ( $mon_action == "poster" && $anti_spam == '' ) {
@@ -58,13 +66,17 @@
 			$message .= "Nom : <b>" . $_POST[ "nom" ] . " " . $_POST[ "prenom" ] . "</b><br>";
 			$message .= "E-mail / Téléphone : <b>" . $_POST[ "email" ] . " / " . $_POST[ "tel" ] . "</b><br>";
 			$message .= "Adresse postale : <b>" . $_POST[ "adresse" ] . ", " . $_POST[ "cp" ] . " " . $_POST[ "ville" ] . "</b><br>";
+			$message .= "Sujet : <b>" . $_POST[ "sujet" ] . "</b><br>";
 			$message .= "Message : <br><i>" . nl2br( $_POST[ "message" ] ) . "</i><br><br>";
 			$message .= "Cordialement.";
 			$message = utf8_decode( $message );
 			if ( $debug ) echo $message;
 			
-			mail( $_to, $sujet, stripslashes( $message ), $entete );
+			$retour = mail( $_to, $sujet, stripslashes( $message ), $entete );
 			//exit();
+			
+			$affichage_success = ( $retour ) ? "" : "wait";
+			$affichage_erreur = ( $retour ) ? "wait" : "";
 		}
 		// ------------------------------------------- //
 		//exit();
@@ -77,16 +89,28 @@
 <html class="no-js" lang="fr">
 	<head>
 		<title>Le Fournil d’Artigues > Contact</title>
-		<?php include('meta.php'); ?>
+		<? include( $_SERVER[ "DOCUMENT_ROOT" ] . "/inc/meta.php" ); ?>
 	</head>
 	<body class="page">
 		
-		<?php include('top.php'); ?>
+		<? include( $_SERVER[ "DOCUMENT_ROOT" ] . "/inc/top.php" ); ?>
 		
 		<!-- Content -->
 		<div class="row">
+			<h2><?=$titre_page?></h2>
 			
-			<h2>Contactez-nous</h2>
+			<div id="div_success" class="large-12 medium-12 small-12 columns <?=$affichage_success?>">
+				<h3>Félicitations!</h3>
+				<p>Votre message a été envoyé avec succès!</p>
+			</div>
+			
+			<div id="div_erreur" class="large-12 medium-12 small-12 columns <?=$affichage_erreur?>">
+				<h3>Erreur!</h3>
+				<p>
+					Une erreur s'est produite lors de l'envoi de votre message.<br>
+					Veuillez essayer ultérieurement.
+				</p>
+			</div>
 			
 			<div class="large-6 medium-6 small-12 columns">
 				<h3>Le Fournil d’Artigues</h3>
@@ -101,6 +125,7 @@
 					33370 Artigues-près-Bordeaux
 				</p>
 			</div>
+			
 			<div class="large-6 medium-6 small-12 columns">
 				<form id="formulaire" class="row contact" method="post" action="contact.php">
 					<input type="hidden" name="mon_action" id="mon_action" value="" />
@@ -110,7 +135,7 @@
 						<input type="text" name="prenom" id="prenom" placeholder="Votre prénom" />						
 					</div>
 					<div class="large-6 medium-12 columns">
-						<input type="text" name="nom" id="nom" placeholder="Votre nom" />
+						<input type="text" name="nom" id="nom" placeholder="Votre nom" required />
 					</div>
 					<div class="large-12 columns">
 						<input type="text" name="adresse" placeholder="Votre adresse">
@@ -122,13 +147,21 @@
 						<input type="text" name="ville" placeholder="Ville" />
 					</div>
 					<div class="large-6 medium-12 columns">
-						<input type="tel" name="tel" id="tel" placeholder="Votre n° de téléphone" />						
+						<input type="tel" name="tel" id="tel" placeholder="Votre n° de téléphone" required />						
 					</div>
 					<div class="large-6 medium-12 columns">
-						<input type="email" name="email" id="email" placeholder="Votre e-mail" />
+						<input type="email" name="email" id="email" placeholder="Votre e-mail" required />
 					</div>
 					<div class="large-12 columns">
-						<textarea name="message" id="message" placeholder="Votre message"></textarea>
+						<select name="sujet" required>
+							<option	value="" selected>A propos de ...</option>
+							<option	value="Renseignements">Renseignements</option>
+							<option	value="Demande de carte de fidélité" <?=$checked_carte?> >Demande de carte de fidélité</option>
+							<option	value="Autre">Autre</option>
+						</select>
+					</div>
+					<div class="large-12 columns">
+						<textarea name="message" id="message" placeholder="Votre message" required></textarea>
 					</div>
 					<div class="large-12 columns">
 						<input type="submit" value="Envoyer" />
@@ -139,7 +172,7 @@
 		</div>
 		<!-- End Content -->
 		
-		<?php include('footer.php'); ?>
+		<? include( $_SERVER[ "DOCUMENT_ROOT" ] . "/inc/footer.php" ); ?>
 		
 	    <script>
 			$(document).ready(function() {

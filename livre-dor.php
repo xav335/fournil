@@ -84,11 +84,11 @@
 <html class="no-js" lang="fr">
 	<head>
 		<title>Le Fournil d'Artigues > Livre d'or</title>
-		<?php include('meta.php'); ?>
+		<? include( $_SERVER[ "DOCUMENT_ROOT" ] . "/inc/meta.php" ); ?>
 	</head>
 	<body class="page">
 		
-		<?php include('top.php'); ?>
+		<? include( $_SERVER[ "DOCUMENT_ROOT" ] . "/inc/top.php" ); ?>
 		
 		<!-- Content -->
 		<div class="row">
@@ -139,7 +139,7 @@
 		</div>
 		<!-- End Content -->
 		
-		<?php include('footer.php'); ?>
+		<? include( $_SERVER[ "DOCUMENT_ROOT" ] . "/inc/footer.php" ); ?>
 		
 	    <script>
 	    	
@@ -164,7 +164,7 @@
 					}
 					
 					$( "#formulaire" ).submit(function() {
-						alert( "validation..." );
+						//alert( "validation..." );
 						var erreur = 0;
 						initialiser();
 						

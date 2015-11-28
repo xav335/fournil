@@ -262,7 +262,7 @@ class Contact extends StorageManager {
 	
 	protected function contactDeleteALL(){
 		try {
-			$sql = "DELETE FROM  .`contact` WHERE fromcontact=0 AND fromgoldbook=0 ;";
+			$sql = "DELETE FROM contact WHERE fromcontact=0 AND fromgoldbook=0 ;";
 			$result = mysqli_query($this->mysqli,$sql);
 	
 			if (!$result) {

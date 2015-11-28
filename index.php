@@ -41,12 +41,12 @@
 <html class="no-js" lang="fr">
 	<head>
 		<title>Le Fournil d’Artigues</title>
-		<?php include('meta.php'); ?>
+		<? include( $_SERVER[ "DOCUMENT_ROOT" ] . "/inc/meta.php" ); ?>
 	</head>
 	
 	<body>
 		
-		<?php include('top.php'); ?>
+		<? include( $_SERVER[ "DOCUMENT_ROOT" ] . "/inc/top.php" ); ?>
 		
 		<!-- Content -->
 		<div class="row">
@@ -60,14 +60,21 @@
 			
 			<div class="<?=$classe_texte?> small-12 columns">
 				<h2>Le Fournil d’Artigues</h2>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis impedit fugit voluptates sunt! Debitis, maxime, aspernatur, aperiam distinctio perspiciatis mollitia possimus cumque aut minus non tenetur vitae illo ea dicta!</p>
-				<p>In neque nibh, porttitor vel viverra eu, vestibulum id nibh. Fusce aliquam magna sed accumsan sodales. Quisque ullamcorper hendrerit est. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
-				<p>Proin eu nulla turpis. Phasellus dapibus lorem sit amet dui accumsan, vitae malesuada sem varius. Mauris porttitor sit amet sapien at venenatis.</p>
+				<p>Pain, pâtisseries, gâteaux, viennoiseries, snacks... Venez vous ressourcer et passer un bon moment au Fournil d'Artigues !</p>
+				<p>L'artisan boulanger Jean-Philippe Boucaud vous accueille chaque jour pour déguster un bon repas avec ses formules Panini, Hamburger ou Sandwich. Venez également goûter nos différentes sortes de pain : maïs, moisson, coeur de lin...</p>
+
+                <p>Le Fournil c'est aussi des bonnes pâtisseries et gâteaux faits maison pour les grandes occasions ou les petits creux. A votre disposition : macarons, meringues, tartes...
+</p><p>
+A découvrir également, notre espace confiseries pour les petits comme pour les grands : bonbons de toutes sortes, gâteaux aux chocolat.
+</p><p>
+Nous vous attendons, à très vite !
+				</p>
 			</div>
 		</div>
 		<!-- End Content -->
 		
-		<?php include('footer.php'); ?>
+		<? include( $_SERVER[ "DOCUMENT_ROOT" ] . "/inc/footer.php" ); ?>
+		
 	    <script>
 			$(document).ready(function(){
 				$('.menu a:first-of-type').addClass('active');

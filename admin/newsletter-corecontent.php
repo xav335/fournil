@@ -6,6 +6,8 @@
 require 'classes/Newsletter.php';
 require 'classes/Contact.php';
 
+$facebooklnk = FACEBOOK_LINK;
+
 $newsletter = new Newsletter();
 
 if (!empty($_GET)){ //Modif 
@@ -15,7 +17,7 @@ if (!empty($_GET)){ //Modif
 	if (empty($result)) {
 		$message = 'Aucun enregistrements';
 	} else {
-		$id= 			$_GET['id'];
+		$id_produit= 			$_GET['id'];
 		$titre=  		$result[0]['titre'];
 		$date= 			traitement_datetime_affiche($result[0]['date']);
 		$bas_page= 		nl2br($result[0]['bas_page']);
@@ -37,7 +39,7 @@ $corps = <<<EOD
 <html>
 <head>
 <meta charset="utf-8" />
-<title>Newsletter $mailNameCustomer</title>
+<title>Newsletter</title>
 <style type="text/css">
 	
 	body {background: #fff;font-family:'PT Sans Narrow', sans-serif;}
@@ -57,7 +59,7 @@ $corps = <<<EOD
 				<div style="text-align:center;  margin-left:auto;margin-right:auto; width: 640px; border: 4px ridge white; padding:20px 20px 20px 20px; ">
 					
 					<a href="http://$urlSite"><img  src="http://$urlSite/newsletter/logo.png" alt=""></a>
-					<br><br>		
+					<br><br>
 					<h1>$titre</h1>
 					<br><br>
 EOD;
@@ -91,7 +93,7 @@ EOD;
 }
 $corps .= <<<EOD
 
-					<a href="$facebookLink"><img  src="http://$urlSite/newsletter/fb.png" alt=""></a><br>
+					<a href="$facebooklnk"><img  src="http://$urlSite/newsletter/fb.png" alt=""></a><br>
 					<p>$bas_page</p>
 					<p class="bas">Si vous souhaitez vous désinscrire de cette newslettrer suivez le lien suivant : <a href="http://$urlSite/newsletter/desinscription.php?id=" >désinscription</a></p>
 					<img src="http://$urlSite/newsletter/track.php?id=XwXwXwXw" alt="">
@@ -110,8 +112,8 @@ if (empty($_GET['action']) && empty($_GET['postaction']) ) {
 
 //$corps = utf8_decode( $corps );
 
-$sujet = "$mailNameCustomer - Newsletter ";
-$entete = "From:$mailNameCustomer <$mailCustomer>\n";
+$sujet = MAILNAMECUSTOMER . " - Newsletter ";
+$entete = "From:" . MAILNAMECUSTOMER . " <" . MAILCUSTOMER . ">\n";
 $entete .= "MIME-version: 1.0\n";
 $entete .= "Content-type: text/html; charset= iso-8859-1\n";
 
@@ -121,8 +123,10 @@ if (!empty($_GET['postaction']) && $_GET['postaction']=='preview') {
 		<a href='javascript:history.back()'>retour</a>";
 	
 	//$_to = "fjavi.gonzalez@gmail.com";
-	$_to = $mailContact;
-	$entete .= "Bcc: ". $mailBcc ."\n";
+	$_to = ( MAIL_TEST != '' )
+    	? MAIL_TEST
+    	: MAIL_CONTACT;
+	$entete .= "Bcc: ". MAIL_BCC ."\n";
 	//echo "Envoi du message à " . $_to . "<br>";
 	$corpsCode = str_replace('XwXwXwXw', randomChar(), $corps);
 	//echo $corps;
@@ -130,10 +134,10 @@ if (!empty($_GET['postaction']) && $_GET['postaction']=='preview') {
 	//mail($_to, $sujet, stripslashes($corps), $entete);
 	///////////////////////////////////////////////////////////
 	////////////////ELASTIC MAIL ICONEO!!!!!!!!!!////////////
-	sendElasticEmail($_to, $sujet, "", stripslashes($corpsCode), $mailCustomer, $mailNameCustomer);
-	sendElasticEmail("fjavi.gonzalez@gmail.com", $sujet, "", stripslashes($corpsCode), $mailCustomer, $mailNameCustomer);
-	sendElasticEmail("xav335@hotmail.com", $sujet, "", stripslashes($corpsCode), $mailCustomer, $mailNameCustomer);
-	sendElasticEmail("jav_gonz@yahoo.com", $sujet, "", stripslashes($corpsCode), $mailCustomer, $mailNameCustomer);
+	//sendElasticEmail($_to, $sujet, "", stripslashes($corpsCode), MAILCUSTOMER, MAILNAMECUSTOMER );
+	sendElasticEmail("fjavi.gonzalez@gmail.com", $sujet, "", stripslashes($corpsCode), MAILCUSTOMER, MAILNAMECUSTOMER );
+	sendElasticEmail("xav335@hotmail.com", $sujet, "", stripslashes($corpsCode), MAILCUSTOMER, MAILNAMECUSTOMER );
+	sendElasticEmail("jav_gonz@yahoo.com", $sujet, "", stripslashes($corpsCode), MAILCUSTOMER, MAILNAMECUSTOMER );
 	///////////////////////////////////////////////////////////
 	
 } elseif (!empty($_GET['postaction']) && $_GET['postaction']=='envoi') { 
@@ -145,7 +149,9 @@ if (!empty($_GET['postaction']) && $_GET['postaction']=='preview') {
 	//print_r($result);
 	if (!empty($result)) {
 		foreach ($result as $value) {
-			$_to = $value['email'];
+			$_to = ( MAIL_TEST != '' )
+		    	? MAIL_TEST
+		    	: $value['email'];
 			$regex = '#^[\w.-]+@[\w.-]+\.[a-zA-Z]{2,6}$#';
 			if (preg_match( $regex, $_to)) {
 				$codeRandom =randomChar();
@@ -155,7 +161,7 @@ if (!empty($_GET['postaction']) && $_GET['postaction']=='preview') {
 				//mail($_to, $sujet, stripslashes($corpsCode), $entete);
 				///////////////////////////////////////////////////////////
 				////////////////ELASTIC MAIL ICONEO!!!!!!!!!!////////////
-				sendElasticEmail($_to, $sujet, "", stripslashes($corpsCode), $mailCustomer, $mailNameCustomer);
+				//sendElasticEmail($_to, $sujet, "", stripslashes($corpsCode), MAILCUSTOMER, MAILNAMECUSTOMER );
 				///////////////////////////////////////////////////////////
 				error_log(date("Y-m-d H:i:s") ." envoi : OK : ". $value['email'] ."\n", 3, "newsletterspy.log");
 				//echo "envoi OK : ". $value['email'] ."<br>";

@@ -1,5 +1,6 @@
 <?php include_once 'inc-auth-granted.php';?>
 <?php include_once 'classes/utils.php';?>
+<?php require( $_SERVER[ "DOCUMENT_ROOT" ] . "/inc/inc.config.php" ); ?>
 <?php 
 require 'classes/Contact.php';
 
