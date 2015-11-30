@@ -116,8 +116,8 @@
 				<h3>Le Fournil d’Artigues</h3>
 				<p>
 					Ouverture :<br/>
-					7j/7<br/>
-					de 5h30 à 20h30
+					Lundi au vendredi 6h / 20h30<br/>
+					Samedi et dimanche 6h30 / 20h30
 				</p>
 				<p>
 					Tél. 05 56 86 70 93<br/>

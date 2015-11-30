@@ -102,11 +102,13 @@
 							<textarea class="col-sm-12" name="description" id="description" required rows="5" ><?=$description?></textarea>
 						</div>
 						
+						<!-- 
 						<div class="form-group" >
 							<label class="col-sm-2" for="titre">Tags :</label>
 							<input type="text" class="col-sm-10" name="tag" value="<?=$tag?>"><br>
 							<i>Veuillez séparer les différents tag par un ";"</i>
 						</div>
+						 -->
 						
 						<div class="form-group" >
 							<label class="col-sm-2" for="titre">En ligne :</label>

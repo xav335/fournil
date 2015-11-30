@@ -87,7 +87,7 @@
 				echo "<p>" . nl2br( $description ) . "</p>\n";
 				
 				// ---- Affichage de la zone des tags ------- //
-				if ( !empty( $tab_tag ) ) {
+				/*if ( !empty( $tab_tag ) ) {
 					echo "<ul class='parfum'>\n";
 					
 					foreach( $tab_tag as $_tag ) {
@@ -96,7 +96,7 @@
 					
 					echo "</ul>\n";
 					echo "<div style='clear:both;'></div>\n";
-				}
+				}*/
 				// ------------------------------------------ //
 				
 				// ---- Image du produit -------------------- //
