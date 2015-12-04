@@ -13,17 +13,19 @@
 			
 			<h2>Traiteur</h2>
 			
-			<div class="large-12 medium-12 small-12 columns">
-				
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis impedit fugit voluptates sunt! Debitis, maxime, aspernatur, aperiam distinctio perspiciatis mollitia possimus cumque aut minus non tenetur vitae illo ea dicta!</p>
-				<p>In neque nibh, porttitor vel viverra eu, vestibulum id nibh. Fusce aliquam magna sed accumsan sodales. Quisque ullamcorper hendrerit est. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
-				<p>Proin eu nulla turpis. Phasellus dapibus lorem sit amet dui accumsan, vitae malesuada sem varius. Mauris porttitor sit amet sapien at venenatis.</p>
+			<div class="large-6 medium-6 small-12 columns">
+				<br>
+				<p>Pour vos demandes de séminaire, réunion, cocktail, soirées…</p>
+<br>
+                   <p> Qualité, Gourmandise, Confiance, Sérieux, Engagement, Considération,… </p>
+                   <br>
+                   <p>La satisfaction n’est jamais le fruit du hasard. Vous aurez l’assurance d’être pris en charge par une équipe de 
+                   professionnels dont l’unique préoccupation est de vous satisfaire.</p>
 				
 			</div>
-			<div class="large-12 medium-12 small-12 columns">
+			<div class="large-6 medium-6 small-12 columns">
 				
-				<p>In neque nibh, porttitor vel viverra eu, vestibulum id nibh. Fusce aliquam magna sed accumsan sodales. Quisque ullamcorper hendrerit est. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
-				<p>Proin eu nulla turpis. Phasellus dapibus lorem sit amet dui accumsan, vitae malesuada sem varius. Mauris porttitor sit amet sapien at venenatis.</p>
+				<p><img src="img/traiteur.jpg" alt="" /></p>
 				
 			</div>
 		</div>
