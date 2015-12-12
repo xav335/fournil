@@ -1,8 +1,8 @@
--- MySQL dump 10.13  Distrib 5.5.38, for debian-linux-gnu (x86_64)
+-- MySQL dump 10.13  Distrib 5.5.44, for debian-linux-gnu (x86_64)
 --
 -- Host: localhost    Database: fournil
 -- ------------------------------------------------------
--- Server version	5.5.38-0+wheezy1
+-- Server version	5.5.44-0+deb8u1
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -55,7 +55,7 @@ CREATE TABLE `catproduct` (
   `image` varchar(50) NOT NULL,
   `ordre_affichage` int(11) NOT NULL DEFAULT '1',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=64 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=65 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -64,7 +64,7 @@ CREATE TABLE `catproduct` (
 
 LOCK TABLES `catproduct` WRITE;
 /*!40000 ALTER TABLE `catproduct` DISABLE KEYS */;
-INSERT INTO `catproduct` VALUES (41,0,'Biscuits & Macarons','/macarons-41.jpg',1),(43,0,'Bûches de Noël','/buche_de_noel-43.jpg',1),(50,41,'Biscuits','',1),(51,41,'Macarons','',2),(56,0,'Patisseries','/patisserie_01-.jpg',1),(58,56,'Piéces montées','/grande_pie_ce_monte_e-.jpg',1),(59,43,'Buches patissières','',1),(60,43,'Buches glacées','',2),(61,0,'sandwichs','/buche_noel_carette_vanille_framb-.jpg',1),(62,61,'classic','',1),(63,61,'complet','',2);
+INSERT INTO `catproduct` VALUES (41,0,'Biscuits & Macarons','/macarons-41.jpg',1),(43,0,'Bûches de Noël','/buche_de_noel-43.jpg',1),(50,41,'Biscuits','',1),(51,41,'Macarons','',2),(56,0,'Patisseries','/patisserie_01-.jpg',1),(59,43,'Buches patissières','',1),(61,0,'sandwichs','/buche_noel_carette_vanille_framb-.jpg',1),(62,61,'classic','',1),(63,61,'complet','',2),(64,56,'petits gateaux','',1);
 /*!40000 ALTER TABLE `catproduct` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -89,7 +89,7 @@ CREATE TABLE `contact` (
   `fromgoldbook` tinyint(4) NOT NULL DEFAULT '0',
   `fromcontact` tinyint(4) NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=22 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -98,7 +98,7 @@ CREATE TABLE `contact` (
 
 LOCK TABLES `contact` WRITE;
 /*!40000 ALTER TABLE `contact` DISABLE KEYS */;
-INSERT INTO `contact` VALUES (1,'q','q','q','q','q','franck_langleron@hotmail.com','q','c\'est un test...',1,0,1),(10,'xavier','gonzalez','','','','fjavi.gonzalez@gmail.com',NULL,NULL,1,0,0);
+INSERT INTO `contact` VALUES (1,'q','q','q','q','q','franck_langleron@hotmail.com','q','c\'est un test...',1,0,1),(21,'xavier','gonzalez','','','','fjavi.gonzalez@gmail.com',NULL,NULL,1,0,0);
 /*!40000 ALTER TABLE `contact` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -148,7 +148,7 @@ CREATE TABLE `goldbook` (
 
 LOCK TABLES `goldbook` WRITE;
 /*!40000 ALTER TABLE `goldbook` DISABLE KEYS */;
-INSERT INTO `goldbook` VALUES (1,'2015-09-06 00:00:00','Franck Langleron','franck_langleron@hotmail.com','Très professionnel ! je recommande!!',1),(2,'2015-09-07 00:00:00','Xavier Gonzalez','xavier@gonzalez.pm','Super boutique très pro',1),(3,'2015-11-07 00:00:00','L\'angléron','franck_langleron@hotmail.com','mon message \r\nc\'est ça!!!',0);
+INSERT INTO `goldbook` VALUES (1,'2015-09-06 00:00:00','Franck Langleron','franck_langleron@hotmail.com','Très professionnel ! je recommande!!',1),(2,'2015-09-07 00:00:00','Xavier Gonzalez','xavier@gonzalez.pm','Super boutique très pro',1);
 /*!40000 ALTER TABLE `goldbook` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -202,7 +202,7 @@ CREATE TABLE `news` (
 
 LOCK TABLES `news` WRITE;
 /*!40000 ALTER TABLE `news` DISABLE KEYS */;
-INSERT INTO `news` VALUES (30,'2015-11-07 00:00:00','Supers bûches de Noël','Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.','/buche_de_noel-30.jpg',1),(32,'2015-12-07 00:00:00','buhes en folie','buche -50%','/buche_noel_carette_vanille_framb-.jpg',1);
+INSERT INTO `news` VALUES (32,'2015-12-07 00:00:00','buches en folie','buche -50%','/buche_noel_carette_vanille_framb-.jpg',1);
 /*!40000 ALTER TABLE `news` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -302,7 +302,7 @@ CREATE TABLE `product` (
   `tag` varchar(100) NOT NULL,
   `online` enum('0','1') NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=14 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -311,7 +311,7 @@ CREATE TABLE `product` (
 
 LOCK TABLES `product` WRITE;
 /*!40000 ALTER TABLE `product` DISABLE KEYS */;
-INSERT INTO `product` VALUES (1,50,'Cookies chocolat orange','Retrouvez le goût authentique des cakes élaborés dans la plus pure tradition.\r\nComposition : œuf, sucre, beurre, poudre d’amandes, farine, fruits, sorbitol. Traces possible de fruits à coques.','/cookies-1.jpg','Orange; Noix du Périgord ;Fruits ','1'),(2,50,'Diamants','Ce biscuit sablé tient son nom de la brillance que lui donne sa croute de sucre cristal sur le dessus.\r\nComposition : Farine, Beurre, Sucre, jaune d’œufs, Sel','/diamants_011 - Copy 1-2.jpg','Vanille;Chocolat;Pistache;Caramel;Pois chiches;Pois cassés;Lentilles','1'),(3,51,'Macarons top','super macarons ','/macarons-3.jpg','vanille;gras','1'),(4,58,'Piéces montées sur mesure','Sur commande uniquement','/grande_pie_ce_monte_e-4.jpg','vanilles;café;chocolat; caramel','1'),(5,58,'Spécial mariage','Spécial mariage','/001-.jpg','nappage;','1'),(6,60,'Buche de Noël','Buche de Noël','/buche_noel_carette_vanille_framb-.jpg','vanilles;café;chocolat; caramel;pistache','1'),(8,62,'jambon beurre','jambon beurre','/001-8.jpg','pavot;sesame;nature','1'),(9,63,'poulet',' ','/036-.jpg','pavot','1'),(10,62,'chorizo',' ','/_MG_5081-.jpg','','1');
+INSERT INTO `product` VALUES (1,50,'Cookies chocolat orange','Retrouvez le goût authentique des cakes élaborés dans la plus pure tradition.\r\nComposition : œuf, sucre, beurre, poudre d’amandes, farine, fruits, sorbitol. Traces possible de fruits à coques.','/cookies-1.jpg','Orange; Noix du Périgord ;Fruits ','1'),(2,50,'Diamants','Ce biscuit sablé tient son nom de la brillance que lui donne sa croute de sucre cristal sur le dessus.\r\nComposition : Farine, Beurre, Sucre, jaune d’œufs, Sel','/diamants_011 - Copy 1-2.jpg','Vanille;Chocolat;Pistache;Caramel;Pois chiches;Pois cassés;Lentilles','1'),(3,51,'Macarons top','super macarons ','/macarons-3.jpg','vanille;gras','1'),(12,64,'tartelette chocolat blanc','fond de tartelette sucré, chocolat blanc sur un lit craquant','/IMG_2978-.jpg','','1'),(13,64,'moelleux chocolat',' ','/IMG_2979-.jpg','','1');
 /*!40000 ALTER TABLE `product` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -324,4 +324,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2015-11-28 12:34:15
+-- Dump completed on 2015-12-12 12:42:17
