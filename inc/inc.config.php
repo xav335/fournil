@@ -46,7 +46,7 @@
 	define( "FACEBOOK_LINK", 	"https://www.facebook.com/lesfournilsdejeanphilippe" );
 	
 	// ---- Mail d'envoi
-	define( "MAIL_TEST", 	"fjavi.gonzalez@gmail.com" ); // Si rempli alors cette valeur ser utilis�e pour les diff�rents envois de mails
-	define( "MAIL_CONTACT", "fjavi.gonzalez@gmail.com" );
+	define( "MAIL_TEST", 	"" ); // Si rempli alors cette valeur ser utilis�e pour les diff�rents envois de mails
+	define( "MAIL_CONTACT", "contact@fournildartigues.com" );
 	define( "MAIL_BCC", 	"xav335@hotmail.com,fjavi.gonzalez@gmail.com,jav_gonz@yahoo.com" );
 ?>
