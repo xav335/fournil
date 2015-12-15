@@ -30,16 +30,6 @@
 			</div>
 		</div>
 		
-		<div class="row">	
-			<div class="large-7 medium-7 small-12 columns">
-				<p><img src="img/traiteur2.jpg" alt="" /></p>
-			</div>
-			<div class="large-5 medium-5 small-12 columns">
-			
-				<p><img src="img/traiteur.jpg" alt="" /></p>
-				
-			</div>
-		</div>
 		<div class="row">
 			<div class="large-6 medium-6 small-12 columns">
 				<p><img src="img/traiteur4.jpg" alt="" /></p>
@@ -50,6 +40,12 @@
 				
 			</div>
 		</div>
+
+<div class="row">
+                  <div class="large-12 medium-12 small-12 columns">
+                          <p><img src="img/traiteur2.jpg" alt="" /></p>
+                  </div>
+          </div>
 		<!-- End Content -->
 		
 		<? include( $_SERVER[ "DOCUMENT_ROOT" ] . "/inc/footer.php" ); ?>
