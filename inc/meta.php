@@ -3,6 +3,7 @@
 		<meta name="description" content="Boulangerie, pâtisserie à Artigues-près-Bordeaux" />
 		<meta name="keywords" content="Boulangerie, pâtisserie, sandwitchs, Pain, pâtisseries, gâteaux, viennoiseries, snacks, repas, déjeuner,macarons, meringues, tartes, bonbons" />
         <meta name="google-site-verification" content="pEov8GJaljy5QONHSBBMIigLgbR7x8HuEhxx3_kgFcA" />
+<meta name="msvalidate.01" content="0F652D91935F25317C22102440B50132" />
 		<meta name="author" content="Iconeo" />
 		<meta name="Resource-type" content="Document" />
 		
