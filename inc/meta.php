@@ -1,6 +1,8 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
 		<meta name="description" content="Boulangerie, pâtisserie à Artigues-près-Bordeaux" />
+		<meta name="keywords" content="Boulangerie, pâtisserie, sandwitchs, Pain, pâtisseries, gâteaux, viennoiseries, snacks, repas, déjeuner,macarons, meringues, tartes, bonbons" />
+        <meta name="google-site-verification" content="pEov8GJaljy5QONHSBBMIigLgbR7x8HuEhxx3_kgFcA" />
 		<meta name="author" content="Iconeo" />
 		<meta name="Resource-type" content="Document" />
 		
