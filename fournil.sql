@@ -55,7 +55,7 @@ CREATE TABLE `catproduct` (
   `image` varchar(50) NOT NULL,
   `ordre_affichage` int(11) NOT NULL DEFAULT '1',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=68 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=74 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -64,7 +64,7 @@ CREATE TABLE `catproduct` (
 
 LOCK TABLES `catproduct` WRITE;
 /*!40000 ALTER TABLE `catproduct` DISABLE KEYS */;
-INSERT INTO `catproduct` VALUES (43,0,'Bûches de Noël','/buche_de_noel-43.jpg',1),(50,41,'Biscuits','',1),(51,41,'Macarons','',2),(56,0,'Patisseries','/patisserie_01-.jpg',1),(59,43,'Buches patissières','',1),(61,0,'sandwichs','/IMG_0340-61.jpg',1),(64,56,'petits gateaux','',1),(66,61,'NOS CLASSICS','/IMG_0340-.jpg',1),(67,61,'NOS COMPLETS','',2);
+INSERT INTO `catproduct` VALUES (43,0,'Bûches de Noël','/buche_de_noel-43.jpg',1),(50,41,'Biscuits','',1),(51,41,'Macarons','',2),(56,0,'Patisseries','/patisserie_01-.jpg',1),(59,43,'Buches patissières','',1),(61,0,'sandwichs','/IMG_0340-61.jpg',1),(64,56,'petits gateaux','',1),(66,61,'NOS CLASSICS','/IMG_0340-.jpg',1),(67,61,'NOS COMPLETS','',2),(68,61,'NOS MENUS','/IMG_0431-.jpg',3),(69,0,'MENUS','/IMG_0431-.jpg',1),(73,69,'notre carte','',1);
 /*!40000 ALTER TABLE `catproduct` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -89,7 +89,7 @@ CREATE TABLE `contact` (
   `fromgoldbook` tinyint(4) NOT NULL DEFAULT '0',
   `fromcontact` tinyint(4) NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=22 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=23 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -98,7 +98,7 @@ CREATE TABLE `contact` (
 
 LOCK TABLES `contact` WRITE;
 /*!40000 ALTER TABLE `contact` DISABLE KEYS */;
-INSERT INTO `contact` VALUES (1,'q','q','q','q','q','franck_langleron@hotmail.com','q','c\'est un test...',1,0,1),(21,'Xavier','GONZALEZ','','','','fjavi.gonzalez@gmail.com','06 81 73 18 70',NULL,1,0,1);
+INSERT INTO `contact` VALUES (1,'q','q','q','q','q','franck_langleron@hotmail.com','q','c\'est un test...',1,0,1),(21,'Xavier','GONZALEZ','','','','fjavi.gonzalez@gmail.com','06 81 73 18 70',NULL,1,0,1),(22,'aurelie','cruel','2 Rue Du fleuve','33310','lormont','aureliecruel1@gmail.com','0625888015','Bonsoir,\r\nJe serais intéresser par vos produit traiteurs pour une soirée le 27 février pour environ 25 personnes j\'aimerais connaître vos tarifs cordialement',0,0,1);
 /*!40000 ALTER TABLE `contact` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -139,7 +139,7 @@ CREATE TABLE `goldbook` (
   `message` text,
   `online` tinyint(4) NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -193,7 +193,7 @@ CREATE TABLE `news` (
   `image1` varchar(250) DEFAULT NULL,
   `online` tinyint(4) NOT NULL DEFAULT '0',
   PRIMARY KEY (`id_news`)
-) ENGINE=InnoDB AUTO_INCREMENT=33 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=35 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -202,7 +202,7 @@ CREATE TABLE `news` (
 
 LOCK TABLES `news` WRITE;
 /*!40000 ALTER TABLE `news` DISABLE KEYS */;
-INSERT INTO `news` VALUES (32,'2015-12-07 00:00:00','buches en folie','buche -50%         ( dans la limite des stocks disponible )','/IMG_0334-32.jpg',1);
+INSERT INTO `news` VALUES (33,'2016-02-02 00:00:00','CHANDELEUR','Venez deguster en toute convivialité nos crepes, bugnes, gauffre.... tout ça fait maison!!!!','/CREPE-33.jpg',1),(34,'2016-02-09 00:00:00','MARDI GRAS!!!','pensez à venir reserver vos crepes, gauffre, bugne, merveille.....','/CREPE-.jpg',1);
 /*!40000 ALTER TABLE `news` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -302,7 +302,7 @@ CREATE TABLE `product` (
   `tag` varchar(100) NOT NULL,
   `online` enum('0','1') NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=21 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=33 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -311,7 +311,7 @@ CREATE TABLE `product` (
 
 LOCK TABLES `product` WRITE;
 /*!40000 ALTER TABLE `product` DISABLE KEYS */;
-INSERT INTO `product` VALUES (1,50,'Cookies chocolat orange','Retrouvez le goût authentique des cakes élaborés dans la plus pure tradition.\r\nComposition : œuf, sucre, beurre, poudre d’amandes, farine, fruits, sorbitol. Traces possible de fruits à coques.','/cookies-1.jpg','Orange; Noix du Périgord ;Fruits ','1'),(2,50,'Diamants','Ce biscuit sablé tient son nom de la brillance que lui donne sa croute de sucre cristal sur le dessus.\r\nComposition : Farine, Beurre, Sucre, jaune d’œufs, Sel','/diamants_011 - Copy 1-2.jpg','Vanille;Chocolat;Pistache;Caramel;Pois chiches;Pois cassés;Lentilles','1'),(3,51,'Macarons top','super macarons ','/macarons-3.jpg','vanille;gras','1'),(12,64,'tartelette chocolat blanc','fond de tartelette sucré, chocolat blanc sur un lit craquant','/IMG_2978-.jpg','','1'),(13,64,'moelleux chocolat',' ','/IMG_2979-.jpg','','1'),(14,59,'LA ROYAL','mousse chocolat, craquant praliné, bille chocolat, biscuit chocolat, glaçage chocolat, décors macaron chocolat','/IMG_0335-.jpg','','1'),(15,59,'LA FLEUR DES NEIGES','mousse chocolat, compoté de fraise, mousse mandarine,biscuit chocolat, coulis de fraise, décor glaçage noir','/IMG_0334-.jpg','','1'),(16,59,'LA CYRANO','mousse vanille crème brûlée, éclats de caramel au beurre salé d\'Isigny, coeur caramel, génoise chocolat, biscuit madeleine caramel','/IMG_0338-.jpg','','1'),(17,59,'LA FORET NOIRE','mousse chocolat, insert chantilly, cerise amarena, finition chantilly','/IMG_0336-.jpg','','1'),(18,59,'L EVASION','mousse framboise, compotée de griottes, biscuit madeleine nature, biscuit joconde rouge','/IMG_0337-.jpg','','1'),(19,66,'nos classics',' ','/IMG_0340-.jpg','','1'),(20,67,'nos complets',' ','/IMG_0339-.jpg','','1');
+INSERT INTO `product` VALUES (1,50,'Cookies chocolat orange','Retrouvez le goût authentique des cakes élaborés dans la plus pure tradition.\r\nComposition : œuf, sucre, beurre, poudre d’amandes, farine, fruits, sorbitol. Traces possible de fruits à coques.','/cookies-1.jpg','Orange; Noix du Périgord ;Fruits ','1'),(2,50,'Diamants','Ce biscuit sablé tient son nom de la brillance que lui donne sa croute de sucre cristal sur le dessus.\r\nComposition : Farine, Beurre, Sucre, jaune d’œufs, Sel','/diamants_011 - Copy 1-2.jpg','Vanille;Chocolat;Pistache;Caramel;Pois chiches;Pois cassés;Lentilles','1'),(3,51,'Macarons top','super macarons ','/macarons-3.jpg','vanille;gras','1'),(12,64,'tartelette chocolat blanc','fond de tartelette sucré, chocolat blanc sur un lit craquant','/IMG_2978-.jpg','','1'),(13,64,'moelleux chocolat',' ','/IMG_2979-.jpg','','1'),(14,59,'LA ROYAL','mousse chocolat, craquant praliné, bille chocolat, biscuit chocolat, glaçage chocolat, décors macaron chocolat','/IMG_0335-.jpg','','1'),(15,59,'LA FLEUR DES NEIGES','mousse chocolat, compoté de fraise, mousse mandarine,biscuit chocolat, coulis de fraise, décor glaçage noir','/IMG_0334-.jpg','','1'),(16,59,'LA CYRANO','mousse vanille crème brûlée, éclats de caramel au beurre salé d\'Isigny, coeur caramel, génoise chocolat, biscuit madeleine caramel','/IMG_0338-.jpg','','1'),(17,59,'LA FORET NOIRE','mousse chocolat, insert chantilly, cerise amarena, finition chantilly','/IMG_0336-.jpg','','1'),(18,59,'L EVASION','mousse framboise, compotée de griottes, biscuit madeleine nature, biscuit joconde rouge','/IMG_0337-.jpg','','1'),(19,66,'nos classics',' ','/IMG_0340-.jpg','','1'),(20,67,'nos complets',' ','/IMG_0339-.jpg','','1'),(23,68,'  ','  ','/IMG_0433-.jpg','','1'),(25,73,'pti dej\'','nous avons plusieurs menus pti dej\' :\r\n- choco/croissant + café 2euros\r\n- viennoiserie( -1.50euros ) + jus d\'orange 2.20 euros\r\n- choco/croissant + grand café/thé/chocolat  2.50euros\r\n- choco/croissant + café + jus d\'orange 3 euros\r\n- choco/croissant + grand café/thé/chocolat + jus d\'orange 3.50 euros','/IMG_0437-.jpg','','1'),(26,73,'toutes nos formules','  ','/IMG_0431-.jpg','','1'),(27,73,'toutes nos formules','  ','/IMG_0433-.jpg','','1'),(28,73,'toutes nos formules','  ','/IMG_0438-.jpg','','1'),(29,73,'toutes nos formules','  ','/IMG_0439-.jpg','','1'),(30,73,'toutes nos formules','   ','/IMG_0440-.jpg','','1'),(31,64,'tartelette citron','fond de tartelette sucré avec sont lit au citron...','/IMG_2981-.jpg','','1'),(32,64,'tartelette caramel beurre salé','fond de tartelette sucré, caramel beurre salé sur un lit craquant','/IMG_2980-.jpg','','1');
 /*!40000 ALTER TABLE `product` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -324,4 +324,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2015-12-29 16:26:27
+-- Dump completed on 2016-02-12  0:27:05
