@@ -21,7 +21,7 @@
 		
 		<!-- Slider -->
 		<div class="row fullwidth slider">
-			<a href="/contact.php?carte=1" class="carte" title="Demandez notre carte de fidélité"><img src="img/demandez-la-carte.png" alt="Demandez notre carte de fidélité" /></a>
+			<a href="http://www.fournildartigues.fr" target="_blank" class="carte" title="Demandez notre carte de fidélité"><img src="img/commandeligne.png" alt="Demandez notre carte de fidélité" /></a>
 			<div class="swiper-container">
 				<div class="swiper-wrapper">
 					<div class="swiper-slide" style="background-image:url('img/slider-01.jpg');"></div>
