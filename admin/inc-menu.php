@@ -47,6 +47,7 @@
 					            	<li><a href="/admin/contact-import.php">Import / Export</a></li>
 					          	</ul>
 					        </li>
+						<!--
 					         <li class="dropdown">
 					          	<a href="newsletter-list.php" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Newsletter<span class="caret"></span></a>
 					          	<ul class="dropdown-menu" role="menu">
@@ -56,6 +57,7 @@
 					            	<li><a href="/admin/newsletterjournal-list.php">Journal des envoi</a></li>
 					          	</ul>
 					        </li>
+						-->
 							<!--<li class="dropdown">
 					          	<a href="bdc.php" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Bon de commande <span class="caret"></span></a>
 					          	<ul class="dropdown-menu" role="menu">
