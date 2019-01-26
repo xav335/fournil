@@ -1,3 +1,4 @@
+<? include_once ( $_SERVER['DOCUMENT_ROOT'] . "/admin/inc-auth-granted.php" );?>
 <!DOCTYPE html>
 <html>
 <head>

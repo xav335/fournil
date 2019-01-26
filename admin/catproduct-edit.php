@@ -64,7 +64,7 @@ if (!empty($_GET)){ //Modif
 						<?php }?>
 					</div>	
 		            <div id="roxyCustomPanel" style="display: none;">
-  							<iframe src="/admin/fileman2/index.html?integration=custom" style="width:100%;height:100%" frameborder="0"></iframe>
+  							<iframe src="/admin/fileman2/index.php?integration=custom" style="width:100%;height:100%" frameborder="0"></iframe>
 					</div>
 					
 					<script type="text/javascript">
@@ -114,7 +114,7 @@ if (!empty($_GET)){ //Modif
 	
 	
 						function RoxyFileBrowser(field_name, url, type, win) {
-						  var roxyFileman = '/admin/fileman/index.html';
+						  var roxyFileman = '/admin/fileman/index.php';
 						  if (roxyFileman.indexOf("?") < 0) {     
 						    roxyFileman += "?type=" + type;   
 						  }

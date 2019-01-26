@@ -76,7 +76,7 @@ if (!empty($result)) {
 			</div>
 		</div>
 		<div id="roxyCustomPanel" style="display: none;">
-  			<iframe src="/admin/fileman2/index.html?integration=custom" style="width:100%;height:100%" frameborder="0"></iframe>
+  			<iframe src="/admin/fileman2/index.php?integration=custom" style="width:100%;height:100%" frameborder="0"></iframe>
 		</div>
 </body>
 </html>

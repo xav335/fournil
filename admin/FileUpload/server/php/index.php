@@ -1,3 +1,4 @@
+<? include_once ( $_SERVER['DOCUMENT_ROOT'] . "/admin/inc-auth-granted.php" );?>
 <?php
 /*
  * jQuery File Upload Plugin PHP Example 5.14

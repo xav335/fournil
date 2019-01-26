@@ -149,7 +149,7 @@ if (!empty($_GET)){ //Modif
 		            	<button class="btn btn-success col-sm-12" type="submit" onclick="$('#postaction').val('modif')"> Valider </button>
 		            </div>
 					<div id="roxyCustomPanel" style="display: none;">
-  							<iframe src="/admin/fileman2/index.html?integration=custom" style="width:100%;height:100%" frameborder="0"></iframe>
+  							<iframe src="/admin/fileman2/index.php?integration=custom" style="width:100%;height:100%" frameborder="0"></iframe>
 					</div>
 					
 					<script type="text/javascript">
